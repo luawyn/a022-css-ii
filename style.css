@@ -1,24 +1,60 @@
-header{
-    border-bottom: 1px solid black;
-  }
-  
-  main{
-    width: 800px;
-  }
-  
-  aside{
-    width: 180px;
-    border: 1px solid black;
-  }
-  
-  footer{
-    background-color: black;
-    color: white;
-    width: 100%;
-  }
-  
-  button{
-    background-color: black;
-    color: white;
-    font-family: serif;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  border-bottom: 1px solid black;
+}
+/* 1-Centralizar `header` e o bloco que contém o corpo do texto. 
+**NO ENTANTO**, o corpo do texto não deve estar alinhado no centro. */
+.centro{
+  text-align: center
+}
+
+main {
+  width: 800px;
+  position:relative;
+  margin: auto;
+}
+/*2-Faça o `footer` colar na parte de baixo da tela, e o elemento `aside`
+ficar fixado à direita, após o corpo do texto da página.*/
+aside {
+  width: 180px;
+  border: 1px solid black;
+  position:fixed;
+  top:100;
+  right:0;
+  bottom:100px;
+  text-align: center;
+}
+
+
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  position:absolute;
+  bottom: 0;
+
+}
+
+/*3-Centralizar os textos e o botão do elemento `aside`, e fazer com que, 
+enquanto o botão estiver clicado/ativo, os textos e botão do elemento 
+`aside` fiquem com cores invertidas (texto branco com fundo preto, 
+ou o contrário, no caso do botão).*/
+.button{
+  background-color: black;
+  color:white;
+}
+.button:active{
+  background-color: white;
+  color: black;
+}
+
+aside:active {
+  background-color:black;
+  color: white;
+}
+
